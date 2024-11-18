@@ -19,6 +19,12 @@ Activate the conda environment
 ```
 conda activate sam2
 ```
+
+Also install SAM2
+```
+pip install -e .
+```
+
 ### Download Checkpoints
 
 To SAM2.1 checkpoints
