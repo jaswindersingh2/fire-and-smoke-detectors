@@ -6,6 +6,14 @@ This repository is build up using SAM2 model from Meta AI Research and Florence2
 |------------------------------------------------------------------------------------------------|
 | <p align="center"> <b>Figure 1: Florence2 and SAM2 pipeline for fire and smoke detection</b> . |
 
+## System Requirements
+**Hardware Requirments:**
+At least 32GB of RAM and 24GB of GPU memory is required to run the model.
+
+**Software Requirments:**
+* [Python >= 3.10](https://www.python.org/downloads/)
+* [Anaconda](https://docs.anaconda.com/anaconda/install/)
+* [CUDA >= 11.7](https://developer.nvidia.com/cuda-11-7-0-download-archive)
 
 ## Getting started
 ```
@@ -15,19 +23,29 @@ cd fire-and-smoke-detectors
 
 ### Create Conda Virtual Environment and Install Dependencies
 
-For Linux
+Create virtual environment
 ```
-conda env create -f environmentLinux.yml
+conda create -n venv python=3.10 anaconda
 ```
 
 Activate the conda environment
 ```
-conda activate sam2
+conda activate venv
 ```
 
-Also install SAM2
+Install PyTorch
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+
+Install SAM2 dependencies
 ```
 pip install -e .
+```
+
+Install florence2 dependencies
+```
+pip install -q transformers flash_attn timm einops supervision==0.22.0rc1
 ```
 
 ### Download Checkpoints
