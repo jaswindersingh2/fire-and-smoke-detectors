@@ -2,7 +2,7 @@
 
 This repository is build up using SAM2 model from Meta AI Research and Florence2 model from Microsoft Research. The main goal of this project is to detect fire and smoke in CCTV images and videos in real time.
 
-| ![](../assets/pipeline_diagram.png)                                                            
+| ![](./assets/pipeline_diagram.png)                                                            
 |------------------------------------------------------------------------------------------------|
 | <p align="center"> <b>Figure 1: Florence2 and SAM2 pipeline for fire and smoke detection</b> . |
 
